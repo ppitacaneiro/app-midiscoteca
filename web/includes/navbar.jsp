@@ -1,0 +1,36 @@
+<%-- 
+    Document   : navvar.jsp
+    Created on : 11-abr-2020, 14:44:57
+    Author     : Pablo
+--%>
+<%@ page import="controllers.ListaAlbums"%>
+<%@ page import="controllers.ListaEstilos"%>
+<%@ page import="controllers.BuscarDiscoPorArtista"%>
+<%@ page import="controllers.EditarDisco"%>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-white" href="#">Mi Discoteca</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="ListaAlbums">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="altadisco.jsp">Nuevo Disco</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="EditarDisco">Editar Disco</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="ListaEstilos">Estilos</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="BuscarDiscoPorArtista">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar por artista..." aria-label="Search" id="search-artist" name="search-artist" onfocus="autompletarNombreArtista('search-artist');">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
